@@ -24,9 +24,18 @@
 		<cucumber.reporters>--plugin pretty</cucumber.reporters>
 		<crowdar.cucumber.option>src/test/resources/features ${cucumber.hooks} ${cucumber.stepsDefinitions} --tags 'not @Ignore' --tags ${cucumber.tags} ${cucumber.reporters}</crowdar.cucumber.option>
         <crowdar.projectType>API</crowdar.projectType>
-
     </properties>
+
     <profiles>
+        <profile>
+            <id>Academy</id>
+            <activation>
+            </activation>
+            <properties>
+                <apiExample.runner>testng.xml</apiExample.runner>
+                <base.api.url>https://api.thecatapi.com/</base.api.url>
+            </properties>
+        </profile>
         <profile>
             <id>Secuencial</id>
             <activation>
@@ -45,6 +54,7 @@
             </properties>
         </profile>
     </profiles>
+
     <dependencies>
         <dependency>
 	        <groupId>io.lippia</groupId>
