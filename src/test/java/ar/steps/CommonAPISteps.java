@@ -10,7 +10,7 @@ public class CommonAPISteps extends PageSteps {
     @Then("Obtengo status code '(.*)'")
     public void obtengoStatusCode(int codEsperado) {
         int statusCode = APIManager.getLastResponse().getStatusCode();
-        Assert.assertEquals(statusCode, codEsperado);
+        Assert.assertEquals(statusCode, codEsperado);   /* Compara StatusCode obtenido con el esperado */
     }
 
 }

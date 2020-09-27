@@ -1,3 +1,4 @@
+#CRS: siglas para Crowdar Report Server.
 Feature: Autenticar en Report Server de Crowdar
   COMO  Usuario de Report Server
   DESEO Verificar mis credenciales
@@ -10,6 +11,6 @@ Feature: Autenticar en Report Server de Crowdar
     And   Obtengo un token
 
     Examples:
-      | request                   | statusCode | operation | entity     |
-      | request/rq_cat_categories | 200        | GET       | CATEGORIES |
+      | request                     | statusCode | operation | entity       |
+      | request/rq_crs_authenticate | 200        | POST      | AUTHENTICATE |
 

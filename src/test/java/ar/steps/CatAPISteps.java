@@ -30,4 +30,3 @@ public class CatAPISteps extends PageSteps {
             System.out.println("\nRespuesta con datos: " + obj.toString() + "\n");
         }
     }
-
