@@ -1,8 +1,9 @@
 {
+  "url": "https://api.thecatapi.com/v1/categories",
   "headers": {
-    "Content-Type": "application/json"
+    "Content-Type": "application/json",
+    "x-api-key": "cde12fa0-ca41-4421-a0bf-9352e6b87b10"
   },
   "body": {
-    "x-api-key": "cde12fa0-ca41-4421-a0bf-9352e6b87b10"
   }
 }
