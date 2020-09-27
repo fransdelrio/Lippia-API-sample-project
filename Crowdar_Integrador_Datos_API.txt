@@ -1,0 +1,10 @@
+
+Documentación en Swagger: http://vps2.crowdaronline.com:8083/swagger-ui/index.html?configUrl=/v3/api-docs/swagger-config
+
+Autenticar: http://vps2.crowdaronline.com:8083/user/authenticate?username=admin&password=password
+
+	(esto devuelve un token JWT para permitir hacer otras peticiones)
+	
+
+	
+	

@@ -21,12 +21,6 @@ public class CatAPISteps extends PageSteps {
         EntityConfiguration.valueOf(entity).getEntityService().getMethod(operacion.toLowerCase(), String.class).invoke("", request);
     }
 
-    @Then("Obtengo status code '(.*)'")
-    public void obtengoStatusCode(int codEsperado) {
-        int statusCode = APIManager.getLastResponse().getStatusCode();
-        Assert.assertEquals(statusCode, codEsperado);
-    }
-
     @And("Los datos son correctos")
     public void losDatosSonCorrectos() { /*probar que no sea nula la respuesta*/
         Object obj = APIManager.getLastResponse().getResponse() ;
