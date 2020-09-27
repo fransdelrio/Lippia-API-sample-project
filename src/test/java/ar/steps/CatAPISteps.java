@@ -18,11 +18,11 @@ public class CatAPISteps extends PageSteps {
     @When("^realizo una peticion '(.*)' a '(.*)' al endpoint de categorias '(.*)'$")
     public void ejecutarOperacion(String operacion, String entity, String request)
             throws IllegalAccessException,IllegalArgumentException,InvocationTargetException,NoSuchMethodException{
-        EntityConfiguration.valueOf(entity).getEntityService().getMethod(operacion.toLowerCase(), String.class).invoke(request);
+        EntityConfiguration.valueOf(entity).getEntityService().getMethod(operacion.toLowerCase(), String.class).invoke("", request);
     }
 
     @Then("Obtengo status code '(.*)'")
-    public void obtengoStatusCodeStatusCode(int codEsperado) {
+    public void obtengoStatusCode(int codEsperado) {
         int statusCode = APIManager.getLastResponse().getStatusCode();
         Assert.assertEquals(statusCode, codEsperado);
     }
@@ -30,8 +30,10 @@ public class CatAPISteps extends PageSteps {
     @And("Los datos son correctos")
     public void losDatosSonCorrectos() { /*probar que no sea nula la respuesta*/
         Object obj = APIManager.getLastResponse().getResponse() ;
-        if (obj==null) {
-            System.out.println("Respuesta sin datos");
+        if (obj == null) {
+            System.out.println("Respuesta sin datos.");
+        }else
+            System.out.println("\nRespuesta con datos: " + obj.toString() + "\n");
         }
     }
-}
+
