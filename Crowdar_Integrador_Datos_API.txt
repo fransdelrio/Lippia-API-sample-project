@@ -7,4 +7,16 @@ Autenticar: http://vps2.crowdaronline.com:8083/user/authenticate?username=admin&
 	
 
 	
-	
+Uriel: https://www.getpostman.com/collections/7c948e7458c72940521b
+
+https://drive.google.com/file/d/1bBB9u0FyfMVosLhDsxEBqRnLU0zgfoFd/view?usp=sharing
+
+
+<profile>
+	<id>swaggerui</id>
+	<properties>
+		<base.api.url>http://vps2.crowdaronline.com:8083/</base.api.url>
+		<apiExample.runner>testng.xml</apiExample.runner>
+	</properties>
+</profile>
+		
