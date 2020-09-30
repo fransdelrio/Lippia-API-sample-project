@@ -4,9 +4,9 @@ Feature: Autenticar en Report Server de Crowdar
   DESEO Verificar mis credenciales
   PARA  Obtener un token que me permita usar la API
 
-  @CrowdarReportServer
+  @CrowdarReportServer @auth
   Scenario Outline: Obtener token
-    When  realizo una peticion '<operation>' a '<entity>' al endpoint de autenticacion '<request>'
+    When  realizo una peticion '<operation>' a '<entity>' al endpoint '<request>'
     Then  Obtengo status code '<statusCode>'
     And   Obtengo un token
 

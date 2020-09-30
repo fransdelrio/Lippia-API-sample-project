@@ -1,16 +1,44 @@
 
 Documentación en Swagger: http://vps2.crowdaronline.com:8083/swagger-ui/index.html?configUrl=/v3/api-docs/swagger-config
 
-Autenticar: http://vps2.crowdaronline.com:8083/user/authenticate?username=admin&password=password
+Autenticar: http://vps2.crowdaronline.com:8083/user/authenticate?username=xxxxxx&password=xxxxxx
 
 	(esto devuelve un token JWT para permitir hacer otras peticiones)
 	
 
+Ejemplos:
+	http://vps2.crowdaronline.com:8083/rest/projects/q	
+
+	{
+	  "sort": {
+		"sorted": true,
+		"unsorted": true
+	  },
+	  "pageSize": 0,
+	  "pageNumber": 0,
+	  "unpaged": true,
+	  "paged": true,
+	  "offset": 0
+	}
 	
-Uriel: https://www.getpostman.com/collections/7c948e7458c72940521b
+rq_crs_projectsq.json	
+	{
+	  "url": "http://vps2.crowdaronline.com:8083/rest/reports/q",
+	  "headers": {
+		"Content-Type": "application/json",
+		"Authorization": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJMaXBwaWEtUmVwb3J0LVNlcnZlciIsInN1YiI6ImFkbWluIiwiaWF0IjoxNjAxMzM3NDMwLCJleHAiOjE2MDE0MjM4MzB9.J_AGDAo400ky-Ctg6v6LxeZMvLN7L6NJofZ9f7Ut-i2pH4j8DoBvyP75_cdc8xK3G6rbXaW-1J3o0WawA72tYw"
+	  },
+	  "urlParameters": {
+		"sort": true,
+		"pageSize": 0,
+		"pageNumber": 0,
+		"unpaged": true,
+		"paged": true,
+		"offset": 0
+	  }
+	}
 
-https://drive.google.com/file/d/1bBB9u0FyfMVosLhDsxEBqRnLU0zgfoFd/view?usp=sharing
-
+	
 
 <profile>
 	<id>swaggerui</id>

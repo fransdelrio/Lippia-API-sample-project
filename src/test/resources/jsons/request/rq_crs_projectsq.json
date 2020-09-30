@@ -1,0 +1,15 @@
+{
+  "url": "http://vps2.crowdaronline.com:8083/rest/projects/q",
+  "headers": {
+    "Content-Type": "application/json",
+    "Authorization": "{{token}}"
+  },
+  "urlParameters": {
+    "sort": true,
+    "pageSize": 0,
+    "pageNumber": 0,
+    "unpaged": true,
+    "paged": true,
+    "offset": 0
+  }
+}

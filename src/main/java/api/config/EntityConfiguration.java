@@ -1,9 +1,6 @@
 package api.config;
 
-import services.AuthenticateService;
-import services.CategoriesService;
-import services.ResponseHeadersService;
-import services.UserService;
+import services.*;
 
 public enum EntityConfiguration {
 
@@ -23,6 +20,16 @@ public enum EntityConfiguration {
     CATEGORIES {
         @Override
         public Class<?> getEntityService() { return CategoriesService.class; }
+    },
+
+    PROJECTS { /* Crowdar Report Server */
+        @Override
+        public Class<?> getEntityService() { return ProjectsService.class; }
+    },
+
+    USERS { /* Crowdar Report Server */
+        @Override
+        public Class<?> getEntityService() { return UserService.class; }
     },
 
     AUTHENTICATE { /* Crowdar Report Server */
