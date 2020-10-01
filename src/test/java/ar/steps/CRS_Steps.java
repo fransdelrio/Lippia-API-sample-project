@@ -8,6 +8,7 @@ import io.cucumber.java.en.*;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.testng.Assert;
+import services.GenericService;
 import services.ProjectsService;
 
 import java.io.*;
@@ -24,6 +25,12 @@ public class CRS_Steps extends PageSteps {
         EntityConfiguration.valueOf(entity).getEntityService().getMethod(operacion.toLowerCase(), String.class).invoke("", request);
     }
 
+    @Then("Obtengo status code '(.*)'")
+    public void obtengoStatusCode(int codEsperado) {
+        int statusCode = APIManager.getLastResponse().getStatusCode();
+        Assert.assertEquals(statusCode, codEsperado);   /* Compara StatusCode obtenido con el esperado */
+    }
+
     @And("Obtengo un token")
     public String obtengoUnToken() throws FileNotFoundException {
         String response = (String) APIManager.getLastResponse().getResponse();
@@ -31,7 +38,7 @@ public class CRS_Steps extends PageSteps {
         JSONObject jsonResponse = null;
         try {
             jsonResponse = new JSONObject(response);
-            //System.out.println("\njsonResponse: \n\n" + jsonResponse + "\n");
+            //System.out.println("\njsonResponse::: \n" + jsonResponse + "\n");
         }catch (JSONException err){
             System.out.println("\nError: "+ err.toString() + "\n");
         }
@@ -64,8 +71,9 @@ public class CRS_Steps extends PageSteps {
         //    e.printStackTrace();
         //}
         String jwtToken = jsonResponse.get("jwt").toString();
-        System.out.println("\nToken JWT obtenido: " + jsonResponse.get("jwt").toString() + "\n");
-        ProjectsService.tlToken.set(jwtToken);
+////        System.out.println("\nToken JWT obtenido: " + jsonResponse.get("jwt").toString() + "\n");
+
+        GenericService.tlToken.set(jwtToken);
         return jwtToken;
     }
 

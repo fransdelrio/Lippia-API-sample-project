@@ -14,5 +14,5 @@ Feature: Consultar info de usuario en Report Server de Crowdar
 
     Examples:
   | request1                    | statusCode1 | operation1 | entity1      | request2              | statusCode2 | operation2 | entity2 |
-  | request/rq_crs_authenticate | 200         | POST       | AUTHENTICATE | request/rq_crs_userme | 200         | GET        | USER    |
+  | request/rq_crs_authenticate | 200         | POST       | AUTHENTICATE | request/rq_crs_userme | 200         | GET        | USERME  |
 

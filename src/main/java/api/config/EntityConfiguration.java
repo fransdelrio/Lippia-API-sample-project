@@ -27,9 +27,9 @@ public enum EntityConfiguration {
         public Class<?> getEntityService() { return ProjectsService.class; }
     },
 
-    USERS { /* Crowdar Report Server */
+    USERME { /* Crowdar Report Server */
         @Override
-        public Class<?> getEntityService() { return UserService.class; }
+        public Class<?> getEntityService() { return UserMeService.class; }
     },
 
     AUTHENTICATE { /* Crowdar Report Server */
